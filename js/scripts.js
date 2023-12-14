@@ -6,6 +6,8 @@
 // seleziono il contenitore
 let containercell = document.querySelector(".containercell"); 
 
+let score = 0;
+
 // agg la funzione al bottone
     let btnGenerate = document.getElementById("generate");
     btnGenerate.addEventListener ("click", 
@@ -40,22 +42,24 @@ let containercell = document.querySelector(".containercell");
 
                 cell.addEventListener("click", function (){
                     //CONDIZIONE IN CUI DICO SE CLICCO LA CELLA CHE HA QUESTA CLASSE MI DICE CHE HO PERSO                                     
-                    if(this.classList.contains('is-bomb')) { CLASSE
+                    if(this.classList.contains('is-bomb')) { //CLASSE
                         this.classList.add('red_bomb');
                         alert("Hai perso!")
                     } else {
                         this.classList.add('winner');
-                        alert("Hai sommato" + [i] + "punteggio"); 
+                        score++
+                        console.log("il tuo punteggio è" + score);
+                        if (score == 100 - 16){
+                            alert("Hai vinto!");
+                            alert("il tuo punteggio è" + score);
+                        }
                     }
-
-                    
-                    
                 });
             } 
         }
     );
                    
-    
+    // console.log("il tuo punteggio è" + score);
 
                     
     // CREO la funzione di numeri random
