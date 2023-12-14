@@ -31,34 +31,38 @@ let containercell = document.querySelector(".containercell");
                 containercell.append(cell);
                 cell.innerHTML = i;
 
+// CONFRONTO SE UNO DEI NUMERI DELLE CELLE è CONTENUTO NEI NUMERI GENERICI DELL ARRAY
                 if(bombsarray.includes(i)) {
-                    cell.classList.add('is-bomb');
+                    cell.classList.add('is-bomb'); //AGG UNA CLASSE PER RICHIAMARLO
                 }
 
 // creo un avvenimento cosi che cliccando sulla cella la colora di blu (aggiungendo la classe che andrò a stilizzare nel css nel caso in cui ci sia bisogno)
 
                 cell.addEventListener("click", function (){
-                    if(this.classList.contains('is-bomb')) {
+                    //CONDIZIONE IN CUI DICO SE CLICCO LA CELLA CHE HA QUESTA CLASSE MI DICE CHE HO PERSO                                     
+                    if(this.classList.contains('is-bomb')) { CLASSE
                         this.classList.add('red_bomb');
                         alert("Hai perso!")
                     } else {
                         this.classList.add('winner');
-                        
+                        alert("Hai sommato" + [i] + "punteggio"); 
                     }
+
+                    
+                    
                 });
             } 
-
-                
         }
     );
-                    
+                   
+    
 
                     
-                    // CREO la funzione di numeri random
+    // CREO la funzione di numeri random
 
-            function rndnumbers(min, max) {
-                const numbers = Math.floor(Math.random() * (max - min + 1)) + min;
-             
-                return numbers;
-            }
+    function rndnumbers(min, max) {
+        const numbers = Math.floor(Math.random() * (max - min + 1)) + min;
+     
+        return numbers;
+    }
 
