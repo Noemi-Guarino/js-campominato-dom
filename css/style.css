@@ -87,8 +87,12 @@ height: auto;
     color:rgb(103, 219, 227) ;
 }
 
-.change{
+.winner{
     background-color: #4e7edd;
     height: 100px;
     width: 100px;
+}
+
+.red_bomb{
+    background-color: red;
 }
