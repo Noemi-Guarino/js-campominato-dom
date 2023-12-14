@@ -10,14 +10,24 @@ h1{
     color: white;
 }
 
+.container_bg{
+    width: 100%;
+    height: 100%;
+    background-color: #4e7edd;
+    padding: 20px;
+}
+
+
 .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
     background-color: #4e7edd;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    height: 100vh;
-    width: 100%;
 }
 
 
@@ -63,21 +73,22 @@ display: flex;
 flex-wrap: wrap;
 background-color: #ae40af;
 width: 100%;
-height: 100vh;
+height: auto;
 }
 
 .cell{
-    border: 1px solid black;
+    border: 1px solid rgb(103, 219, 227);
+    background-color: #cd7cce;
     height: 100px;
     width: 100px;
     padding: 20px;  
     text-align: center; 
     line-height: 50px; 
+    color:rgb(103, 219, 227) ;
 }
 
 .change{
     background-color: #4e7edd;
     height: 100px;
     width: 100px;
-
 }
